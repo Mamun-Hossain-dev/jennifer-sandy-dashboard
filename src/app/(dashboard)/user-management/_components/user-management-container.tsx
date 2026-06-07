@@ -78,7 +78,7 @@ const UserManagementContainer = () => {
   } else if (data && data?.data && data?.data?.length > 0) {
     content = (
       <Table className="">
-        <TableHeader className="bg-[#E6F2FD] rounded-t-[12px]">
+        <TableHeader className="bg-[#E6F2FD] !rounded-t-[12px]">
           <TableRow className="">
             <TableHead className="text-sm font-normal leading-[150%] text-[#343A40] py-4 pl-6">
               Name
@@ -97,7 +97,7 @@ const UserManagementContainer = () => {
             </TableHead>
           </TableRow>
         </TableHeader>
-        <TableBody className="border-b border-x border-[#E6E7E6] rounded-b-[12px]">
+        <TableBody className="border-b border-x border-[#E6E7E6] !rounded-b-[12px]">
           {data?.data?.map((item, index) => {
             return (
               <TableRow key={index} className="">
@@ -215,7 +215,7 @@ const UserManagementContainer = () => {
           />
         )}
 
-        {/* contact view modal  */}
+        {/* user view modal  */}
         <div>
           {selectViewContact && (
             <UserManagementView
