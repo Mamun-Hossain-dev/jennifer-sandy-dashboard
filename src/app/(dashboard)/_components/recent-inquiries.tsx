@@ -12,7 +12,7 @@ interface RecentInquiriesProps {
   limit?: number;
 }
 
-const RecentInquiries = ({ limit = 5 }: RecentInquiriesProps) => {
+const RecentInquiries = ({ limit = 3 }: RecentInquiriesProps) => {
   const session = useSession();
   const token = (session?.data?.user as { accessToken: string })?.accessToken;
 
@@ -81,7 +81,7 @@ const RecentInquiries = ({ limit = 5 }: RecentInquiriesProps) => {
               index !== inquiries.length - 1 ? "border-b border-[#E6E6E8]" : ""
             }`}
           >
-            <p className="text-base leading-normal font-semibold text-[#343A40] truncate">
+            <p className="text-base leading-normal font-semibold text-[#4c4e50] truncate">
               {inquiry.firstName} {inquiry.lastName}
             </p>
             <p className="text-sm text-[#68706A] font-normal leading-normal truncate">
