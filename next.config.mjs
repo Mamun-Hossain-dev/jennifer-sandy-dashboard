@@ -1,22 +1,14 @@
-import { createRequire } from 'module';
-
-const require = createRequire(import.meta.url);
-
 const nextConfig = {
+  output: 'standalone',
   images: {
-    domains: ["example.com", "res.cloudinary.com"],
     remotePatterns: [
       {
-        protocol: "https",
-        hostname: "**",
-      },
-      {
-        protocol: "http",
-        hostname: "**",
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
       },
     ],
   },
   reactStrictMode: true,
-};
-
-export default nextConfig;
+}
+ 
+export default nextConfig
